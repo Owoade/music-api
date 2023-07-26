@@ -15,7 +15,7 @@ Retrieve search results of songs.
 - Endpoint: `/search?term={term}`
 - Method: GET
 - Parameters:
-  - `term` (required): music title, artist e.t.c.
+  - `term` (required):this can be a track's title, artist e.t.c.
 
 Example:
 
@@ -46,7 +46,7 @@ Retrieve lyrics.
 
 Example:
 
-GET https://hilarious-wig-hare.cyclic.app/lyrics?title={oceans}&artist={hillsongs}
+GET https://hilarious-wig-hare.cyclic.app/lyrics?title=oceans&artist=hillsongs
 
 
 ## Response Format
@@ -70,7 +70,7 @@ The API responses are in JSON format.
 ```json
 {
     "status": true,
-    "message": "Lyrics successfully retrieved",
+    "message": "Top tracks successfully retrieved",
     "data": {
         "tracks": [
             {
@@ -159,3 +159,51 @@ The API responses are in JSON format.
 ```
 
 
+### Top Tracks
+
+```json
+{
+    "status": true,
+    "message": "Search result successfully retrieved",
+    "data": {
+        "results": [
+            {
+                "image": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/08/8c/24/088c2405-2e33-801b-5c38-e967f2c01e69/191404113974.png/400x400cc.jpg",
+                "artist_image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/a2/2d/df/a22ddf71-9254-043c-c162-11fbc25c5ff3/mzl.ilbjswky.jpg/800x800cc.jpg",
+                "title": "Hello",
+                "subtitle": "Adele",
+                "audio_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/d0/0f/8d/d00f8d18-1666-9b80-a3c1-efd2aa93a20f/mzaf_8898984388967624975.plus.aac.ep.m4a"
+            },
+            {
+                "image": "https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/56/4d/ba/564dba2a-d681-7ed3-05db-a3dad18fffc4/196871101370.jpg/400x400cc.jpg",
+                "artist_image": "https://is3-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/ce/a3/1f/cea31f1b-e492-b006-44b2-79527488ccbc/cd49f277-8400-4fd8-a077-9918fb6b941d_file_cropped.png/800x800cc.jpg",
+                "title": "Hello",
+                "subtitle": "Aqyila",
+                "audio_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/bb/a6/ea/bba6ea05-d3e8-81bc-bf62-4c1fde586577/mzaf_11444033105491756167.plus.aac.ep.m4a"
+            },
+            {
+                "image": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/3e/95/a1/3e95a13c-086c-2f8a-6c83-376481dc3f16/20UMGIM61787.rgb.jpg/400x400cc.jpg",
+                "artist_image": "https://is5-ssl.mzstatic.com/image/thumb/Features125/v4/e5/48/88/e5488851-ff42-f0ee-5466-899463fc2ef8/pr_source.png/800x800cc.jpg",
+                "title": "Hello (feat. A Boogie wit da Hoodie)",
+                "subtitle": "Pop Smoke",
+                "audio_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/d7/64/ba/d764bae3-5d53-3970-2853-c50b99469e8d/mzaf_12210569998452209575.plus.aac.ep.m4a"
+            },
+            {
+                "image": "https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/89/77/46/897746b8-3d89-c551-4359-7aa440b67b69/mzi.clkeppje.jpg/400x400cc.jpg",
+                "artist_image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/e7/2b/d0/e72bd06d-6814-1c37-e678-c2ac07228dac/pr_source.png/800x800cc.jpg",
+                "title": "Hello",
+                "subtitle": "Martin Solveig & Dragonette",
+                "audio_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/80/69/1b/80691ba9-30bb-2c5b-929c-55dab79ed6eb/mzaf_79637561581098651.plus.aac.ep.m4a"
+            },
+            {
+                "image": "https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/8a/60/4f/8a604fba-247c-d4e2-25b0-ed5b230fe948/00602537021598.rgb.jpg/400x400cc.jpg",
+                "artist_image": "https://is4-ssl.mzstatic.com/image/thumb/Features125/v4/8d/05/8e/8d058ed9-4dff-0d6a-8e0b-b2d42898ea6a/pr_source.png/800x800cc.jpg",
+                "title": "Hello",
+                "subtitle": "Lionel Richie",
+                "audio_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/47/a1/9d/47a19d17-a17c-c18b-2b91-c5592faba953/mzaf_13053068156969463641.plus.aac.ep.m4a"
+            }
+        ]
+    },
+    "status_code": 200
+}
+```
